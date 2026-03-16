@@ -1,0 +1,5 @@
+// Top-level settings for the CardDumpParser Android project.
+// This file declares the project name and includes the app module.
+
+rootProject.name = 'CardDumpParser'
+include ':app'

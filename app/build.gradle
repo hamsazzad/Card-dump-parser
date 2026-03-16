@@ -1,0 +1,72 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    // We target API 33 to support modern devices while remaining
+    // compatible with older versions down to API 21.
+    compileSdk = 33
+
+    defaultConfig {
+        applicationId = "com.example.carddumpparser"
+        minSdk = 21
+        targetSdk = 33
+        versionCode = 1
+        versionName = "1.0"
+
+        // Only include the armeabi‑v7a native ABI to reduce APK size and
+        // memory footprint on constrained devices. This setting also
+        // prevents the inclusion of unnecessary native libraries for other
+        // architectures.
+        ndk {
+            abiFilters.add("armeabi-v7a")
+        }
+
+        // Use the support library for vector drawables on pre‑Lollipop
+        // devices.
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            // For production builds disable code minification to simplify
+            // debugging. It can be enabled later if ProGuard/R8 rules are
+            // properly configured. Keeping it off avoids potential issues on
+            // older devices.
+            minifyEnabled = false
+            proguardFiles(getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro')
+        }
+        debug {
+            // Debug builds remain unminified.
+            minifyEnabled = false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    // Enable view binding for type‑safe access to layout views. This avoids
+    // the need for findViewById calls and reduces boilerplate code.
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+    // Core library support for Kotlin and Android.
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.0'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    // Material design components for buttons and input fields.
+    implementation 'com.google.android.material:material:1.9.0'
+    // RecyclerView for efficient list rendering of parsed cards.
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+}

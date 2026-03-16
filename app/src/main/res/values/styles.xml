@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. We extend MaterialComponents for modern
+         visual elements and define a dark palette. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#0f0</item>
+        <item name="colorPrimaryVariant">#0a0</item>
+        <item name="colorOnPrimary">#000000</item>
+        <item name="colorSecondary">#cca300</item>
+        <item name="colorOnSecondary">#000000</item>
+        <item name="android:colorBackground">#050505</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:windowBackground">#050505</item>
+    </style>
+</resources>

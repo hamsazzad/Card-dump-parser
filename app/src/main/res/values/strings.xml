@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Application name displayed on the launcher -->
+    <string name="app_name">Card Dump Parser</string>
+
+    <!-- Type selector strings -->
+    <string name="title_type_selector">CARD DUMP PARSER</string>
+    <string name="visa">VISA</string>
+    <string name="mastercard">MASTERCARD</string>
+    <string name="unionpay">UNIONPAY</string>
+    <string name="select_card_type_hint">Select card type to initialize</string>
+
+    <!-- Terminal workspace strings -->
+    <string name="billing_address">Billing Address (Optional)</string>
+    <string name="country">Country</string>
+    <string name="address_line_1">Address Line 1</string>
+    <string name="city">City</string>
+    <string name="state_province">State / Province</string>
+    <string name="zip_code">ZIP Code</string>
+    <string name="dump_placeholder">&gt; Paste raw dump lines here…&#10;&gt; Live | 5154625837165510|03|2031|599 | [BIN …]&#10;&gt; 4266843157701883 06/2031 244&#10;&gt; Awaiting input…</string>
+    <string name="parse">Execute Parse</string>
+    <string name="export_html">Export HTML Data</string>
+    <string name="no_data">No data detected</string>
+    <string name="change_type">Change Type</string>
+    <string name="cards_count_format">%1$d card%s</string>
+    <string name="card_data_header">Virtual Card Data</string>
+    <string name="expiry">Expiry</string>
+    <string name="cvv">CVV</string>
+
+    <!-- Toast messages -->
+    <string name="export_success">Exported HTML to: %1$s</string>
+    <string name="copy_success">Copied to clipboard</string>
+</resources>

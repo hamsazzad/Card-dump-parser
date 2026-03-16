@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.carddumpparser.MainActivity">
+
+    <!-- MatrixView draws the falling binary digits animation in the
+         background. It occupies the full screen and sits behind the
+         fragment container. -->
+    <com.example.carddumpparser.MatrixView
+        android:id="@+id/matrixView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Fragment container. Fragments replace this FrameLayout with the
+         type selector and terminal screens. Placed on top of the matrix
+         animation. -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>
